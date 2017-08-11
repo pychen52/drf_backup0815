@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 import django.db.models.deletion
-
+from django.contrib.postgres.fields import ArrayField
 
 class Migration(migrations.Migration):
 
@@ -18,6 +18,8 @@ class Migration(migrations.Migration):
             name='Rainfall',
             fields=[
                 ('rpk', models.AutoField(primary_key=True, serialize=False)),
+                ('name', models.CharField(max_length=10)),
+                ('sid', models.CharField(max_length=5)),
                 ('timestamp', models.CharField(max_length=25)),
                 ('r_10m', models.FloatField(blank=True, null=True)),
                 ('r_1h', models.FloatField(blank=True, null=True)),
@@ -35,23 +37,24 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='RainfallStation',
+            name='Station',
             fields=[
-                ('spk', models.IntegerField(primary_key=True, serialize=False)),
-                ('name', models.CharField(max_length=10)),
-                ('sid', models.CharField(max_length=5)),
-                ('county', models.CharField(max_length=3)),
-                ('lon', models.FloatField()),
-                ('lat', models.FloatField()),
+                ('id', models.AutoField(primary_key=True, serialize=False)),
+                ('Region', models.CharField(max_length=32)),
+                ('Regional_Drought_Stage',ArrayField(models.CharField(max_length=32,blank=True),size=12)),
+                ('Reservoir_Name', models.CharField(max_length=32)),
+                ('Reservoir_Storage', ArrayField(models.DecimalField(decimal_places=4, max_digits=10),size=12)),
+                ('Reservoir_Level', models.DecimalField(decimal_places=4, max_digits=7)),
+                ('Date', models.CharField(max_length=32)),
             ],
             options={
-                'verbose_name': 'RainfallStation',
-                'verbose_name_plural': 'RainfallStations',
+                'verbose_name': 'Station',
+                'verbose_name_plural': 'Stations',
             },
         ),
         migrations.AddField(
             model_name='rainfall',
             name='station',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='weather.RainfallStation'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='weather.Station'),
         ),
     ]

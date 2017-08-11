@@ -1,8 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Rainfall, RainfallStation
+from .models import Rainfall, Station
 
 admin.site.register(Rainfall)
-admin.site.register(RainfallStation)
+admin.site.register(Station)
 

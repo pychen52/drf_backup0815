@@ -1,13 +1,12 @@
 from rest_framework import serializers
-from weather.models import Rainfall, RainfallStation
+from weather.models import Rainfall, Station
 
-class RainfallStationSerializer(serializers.ModelSerializer):
+class StationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RainfallStation
+        model = Station
         fields = '__all__' 
 
 class RainfallSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rainfall
         fields = '__all__' 
-

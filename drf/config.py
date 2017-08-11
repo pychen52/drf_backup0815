@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 MYSQL_CONFIG = {
     'host': 'localhost',
-    'user': 'dbuser',
-    'passwd': 'dbuser1234',
+    'user': 'root',
+    'passwd': 'p_Eiy!Uaa7ya1724star',
     'db': 'demo',
     'charset': 'utf8'
 }
@@ -10,11 +10,11 @@ MYSQL_CONFIG = {
 MYSQL_ROOT_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'passwd': 'root1234',
+    'passwd': 'p_Eiy!Uaa7ya1724star',
     'charset': 'utf8'
 }
 
 HOST_CONFIG = {
 	'debug': True,
-    'dev': 'drf-mysql-20170730-wyde.c9users.io'
+    'dev': 'prototype0810-peiyuan.c9users.io'
 }
