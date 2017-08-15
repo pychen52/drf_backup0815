@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
-MYSQL_CONFIG = {
-    'host': 'localhost',
-    'user': 'root',
-    'passwd': 'p_Eiy!Uaa7ya1724star',
-    'db': 'demo',
-    'charset': 'utf8'
-}
-
 MYSQL_ROOT_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'passwd': 'p_Eiy!Uaa7ya1724star',
+    'passwd': 'root1234',
+    'charset': 'utf8'
+}
+
+MYSQL_CONFIG = {
+    'host': 'localhost',
+    'user': 'demouser',
+    'passwd': 'demo1234',
+    'db': 'demo',
     'charset': 'utf8'
 }
 
