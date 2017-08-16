@@ -4,10 +4,9 @@ from weather import views
 from django.views.generic.base import RedirectView
 
 urlpatterns = [ 
-    url(r'^rainfall/$', views.RainfallList.as_view()),
-    url(r'^rainfall/(?P<pk>[0-9]+)/$', views.RainfallDetail.as_view()),
-    url(r'^stations/(?P<Region>.+&P<Date>.+)/$',views.StationList.as_view()),
-    url(r'^.*$', views.StationList.as_view(), name='station_list'),
+    url(r'^weather/(?P<pk>[0-9]+)/$', views.LightList.as_view()),
+    url(r'^weather/(?P<Region>.+&P<Date>.+)/$',views.LightList.as_view()),
+    url(r'^.*$', views.LightList.as_view(), name='weather_list'),
 ]
                                          
 urlpatterns = format_suffix_patterns(urlpatterns)

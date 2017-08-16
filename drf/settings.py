@@ -26,7 +26,7 @@ SECRET_KEY = 'vbi5=-es%2q4jsk9#qogt&99r0tjclcu9&im&@akdbm+2#&%bo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = HOST_CONFIG['debug']
 
-ALLOWED_HOSTS = [HOST_CONFIG['dev']]
+ALLOWED_HOSTS = ['prototype0815-peiyuan.c9users.io']
 
 
 # Application definition
