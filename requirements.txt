@@ -15,7 +15,7 @@ pytz==2017.2
 requests==2.18.3
 simplejson==3.11.1
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 asn1crypto==0.22.0
 attrs==17.2.0
 Automat==0.6.0
